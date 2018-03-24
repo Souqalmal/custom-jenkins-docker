@@ -8,9 +8,9 @@ LABEL author.name="Carlos Garcia-Berro Molero" \
 # Also to avoid the permission issue of /var/jenkins_home/copy_reference_file.log
 USER root
 
-# Install PHP7.0
+# Install PHP7.1
 RUN apt-get update && apt-get install -y \
-  php
+  php7.1
 
 # Install composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
