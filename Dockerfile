@@ -19,7 +19,8 @@ RUN /usr/local/bin/install-plugins.sh \
   ws-cleanup \
   nodejs \
   matrix-auth \
-  sbt
+  sbt \
+  dashboard-view
 
 # Configure SSH client
 RUN echo '\n \
