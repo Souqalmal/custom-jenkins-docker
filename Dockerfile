@@ -16,7 +16,11 @@ RUN apt-key adv --keyserver keys.gnupg.net --recv-keys 14AA40EC0831756756D7F66C4
 # Install php7.1
 RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get update; \
-    apt-get -qy install php7.1
+    apt-get -qy install \
+    php7.1 \
+    php7.1-mbstring \
+    php7.1-xml
+
 # Install composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
