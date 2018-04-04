@@ -3,8 +3,8 @@
 # Check number of arguments
 if [ "$#" -lt 1 ]; then
     echo "USAGE: up.sh <port>"
-exit 2
-
+  exit 2
+fi
 
 echo ">>>> Moving to $(dirname "$0")"
 cd "$(dirname "$0")"
