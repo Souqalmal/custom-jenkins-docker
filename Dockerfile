@@ -21,6 +21,11 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     php7.1-mbstring \
     php7.1-xml
 
+# Install sass
+RUN apt-get update; \
+    apt-get -y install ruby-full build-essential rubygems; \
+    gem install sass
+
 # Install composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
